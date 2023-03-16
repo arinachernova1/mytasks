@@ -18,16 +18,20 @@
 280 : 553
 300 : 573
 Левый столбец – это градусы Цельсия, правый – градусы Кельвина**/
-#include <stdio.h>
+ #include <stdio.h>
 int main() {
-  int cels, kelv;
-  int step = 20;
-  while (cels <= 300)
-  {
-      kelv= cels + 273;
-      printf("%d : %d\n", cels, kelv);
-      cels = cels+ step;
-  }
- 
+float fahr, celcius;
+float lower, upper, step;
+
+lower = 0;
+upper = 300;
+step = 20;
+
+fahr = lower;
+
+while (fahr <= upper) {
+celcius = fahr + 273.0;
+printf("%8.2f : %8.2f\n", fahr, celcius); //8 символов в первой колонке, 2 знака после запятой
+fahr = fahr + step;
 }
-  
+}
